@@ -87,6 +87,11 @@ return {
       end,
       ["lua_ls"] = function()
         -- configure lua server (with special settings)
+        lspconfig.clangd.setup {
+          init_options = {
+            cmd = { '~/971-Robot-Code/compile_commands.json' }
+          }
+        }
         lspconfig["lua_ls"].setup({
           capabilities = capabilities,
           settings = {

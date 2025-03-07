@@ -1,3 +1,7 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+
 vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
@@ -10,16 +14,16 @@ keymap.set("n", "<leader>a", "<cmd>buffer #<CR>", { desc = "Go to last visited b
 -- keymap.set("n", "<ENTER>", "zo", { desc = "Expand fold" })
 -- keymap.set("n", "<TAB>", "zc", { desc = "Close Fold" })
 
-keymap.set('v', '<', "<gv", { noremap = true, desc = "Better indentation" })
-keymap.set('v', '>', ">gv", { noremap = true, desc = "Better indentation" })
+keymap.set("v", "<", "<gv", { noremap = true, desc = "Better indentation" })
+keymap.set("v", ">", ">gv", { noremap = true, desc = "Better indentation" })
 
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
 
-keymap.set('n', 'n', 'nzzzv', {})
-keymap.set('n', 'N', 'Nzzzv', {})
-keymap.set('n', '<C-d>', '<C-d>zz', {})
-keymap.set('n', '<C-u>', '<C-u>zz', {})
+keymap.set("n", "n", "nzzzv", {})
+keymap.set("n", "N", "Nzzzv", {})
+keymap.set("n", "<C-d>", "<C-d>zz", {})
+keymap.set("n", "<C-u>", "<C-u>zz", {})
 
 keymap.set("n", "<leader>wv", "<C-w>v", { desc = "Split vertically" })
 keymap.set("n", "<leader>wh", "<C-w>s", { desc = "Split horizontally" })
@@ -43,10 +47,12 @@ keymap.set("n", "<leader>bl", "<cmd>bl<CR>", { desc = "Go to the last buffer" })
 keymap.set("n", "<leader>gr", ":Gitsigns reset_hunk<CR>", { desc = "Reset hunk" })
 keymap.set("n", "<leader>gs", ":Gitsigns stage_hunk<CR>", { desc = "Stage hunk" })
 
-keymap.set('n', '<leader>gR', ":Gitsigns reset_buffer<CR>", { desc = "Reset buffer" })
-keymap.set('n', '<leader>gS', ":Gitsigns stage_buffer<CR>", { desc = "Stage buffer" })
+keymap.set("n", "<leader>gR", ":Gitsigns reset_buffer<CR>", { desc = "Reset buffer" })
+keymap.set("n", "<leader>gS", ":Gitsigns stage_buffer<CR>", { desc = "Stage buffer" })
 
-keymap.set('n', '<leader>gp', ":Gitsigns preview_hunk_inline<CR>")
+keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk_inline<CR>")
 
-keymap.set('n', '<leader>gb', ":Gitsigns blame_line<CR>", { desc = "Blame line" })
-keymap.set('n', '<leader>gB', function() package.loaded.gitsigns.blame_line { full = true } end, { desc = "Blame line" })
+keymap.set("n", "<leader>gb", ":Gitsigns blame_line<CR>", { desc = "Blame line" })
+keymap.set("n", "<leader>gB", function()
+  package.loaded.gitsigns.blame_line({ full = true })
+end, { desc = "Blame line" })

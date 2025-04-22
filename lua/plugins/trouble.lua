@@ -33,6 +33,6 @@ return {
       "<leader>xq",
       "<cmd>Trouble qflist toggle<cr>",
       desc = "Quickfix List (Trouble)",
-    }
-  }
+    },
+  },
 }

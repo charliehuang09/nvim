@@ -1,6 +1,6 @@
 return {
   {
-    'stevearc/oil.nvim',
+    "stevearc/oil.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {},
     config = function()
@@ -179,12 +179,12 @@ return {
         -- Configuration for the floating keymaps help window
         keymaps_help = {
           border = "rounded",
-        }
+        },
       })
 
       local keymap = vim.keymap -- for conciseness
 
       keymap.set("n", "-", require("oil").toggle_float)
-    end
-  }
+    end,
+  },
 }

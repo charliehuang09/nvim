@@ -44,3 +44,16 @@ keymap.set(
 vim.keymap.set("n", "<leader>rr", ":lua vim.lsp.buf.rename()<CR>")
 
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { noremap = true, silent = true })
+
+vim.keymap.set('n', '<leader>db', "<cmd> DapToggleBreakpoint <CR>", { desc = "Add breakpoint at line" })
+vim.keymap.set('n', '<leader>dr', "<cmd> DapContinue <CR>", { desc = "Start/continue the debugger" })
+vim.keymap.set('n', '<leader>dt', "<cmd> DapTerminate <CR>", { desc = "Stop the debugger" })
+vim.keymap.set('n', '<C-b>', "<cmd> DapStepOver <CR>", { desc = "Step over" })
+vim.keymap.set('n', '<C-n>', "<cmd> DapStepInto <CR>", { desc = "Step into" })
+vim.keymap.set('n', '<C-m>', "<cmd> DapStepOut <CR>", { desc = "Step out" })
+
+vim.keymap.set('n', '<C-Up>', '<C-w>k', { desc = "Window up" })
+vim.keymap.set('n', '<C-Down>', '<C-w>j', { desc = "Window down" })
+vim.keymap.set('n', '<C-Left>', '<C-w>h', { desc = "Window left" })
+vim.keymap.set('n', '<C-Right>', '<C-w>l', { desc = "Window right" })

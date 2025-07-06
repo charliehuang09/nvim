@@ -15,22 +15,18 @@ return {
     end)
 
     vim.keymap.set("n", "<C-h>", function()
-      print("asdfasdf")
       require("harpoon.ui").nav_file(1)
     end)
 
     vim.keymap.set("n", "<C-j>", function()
-      print("asdfasdf")
       require("harpoon.ui").nav_file(2)
     end)
 
     vim.keymap.set("n", "<C-k>", function()
-      print("asdfasdf")
       require("harpoon.ui").nav_file(3)
     end)
 
     vim.keymap.set("n", "<C-l>", function()
-      print("asdfasdf")
       require("harpoon.ui").nav_file(4)
     end)
   end

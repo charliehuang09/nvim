@@ -57,3 +57,5 @@ vim.keymap.set('n', '<C-Up>', '<C-w>k', { desc = "Window up" })
 vim.keymap.set('n', '<C-Down>', '<C-w>j', { desc = "Window down" })
 vim.keymap.set('n', '<C-Left>', '<C-w>h', { desc = "Window left" })
 vim.keymap.set('n', '<C-Right>', '<C-w>l', { desc = "Window right" })
+
+vim.keymap.set('n', '<leader>fmd', vim.lsp.buf.format)

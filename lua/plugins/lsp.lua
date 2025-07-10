@@ -12,7 +12,8 @@ return {
       lspconfig.lua_ls.setup {}
       lspconfig.clangd.setup {}
       lspconfig.pyright.setup {}
-    end,
+      lspconfig.ruff.setup {}
+    end
   },
   {
     "mason-org/mason-lspconfig.nvim",

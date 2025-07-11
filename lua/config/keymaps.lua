@@ -6,6 +6,11 @@ keymap.set("n", ";", ":", {})
 keymap.set({ 'n', 'v' }, 'd', '"_d', { noremap = true })
 keymap.set('n', 'dd', '"_dd', { noremap = true })
 
+keymap.set("n", "J", ":m .+1<CR>==", { noremap = true, silent = true })
+keymap.set("n", "K", ":m .-2<CR>==", { noremap = true, silent = true })
+keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Shift visual selected line down
+keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- Shift visual selected line up
+
 keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 keymap.set("n", "n", "nzzzv", {})

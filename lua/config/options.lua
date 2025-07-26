@@ -21,3 +21,10 @@ opt.clipboard:append("unnamedplus") -- use system clipboard
 opt.updatetime = 40
 
 vim.opt.hidden = false
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
+})

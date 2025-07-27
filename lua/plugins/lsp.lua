@@ -11,14 +11,13 @@ return {
 
       lspconfig.lua_ls.setup {}
       lspconfig.clangd.setup {}
-      lspconfig.pyright.setup {}
       lspconfig.ruff.setup {}
     end
   },
   {
     "mason-org/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = { "lua_ls", "clangd", "pyright" },
+      ensure_installed = { "lua_ls", "clangd" },
     },
     dependencies = {
       { "mason-org/mason.nvim", opts = {} },

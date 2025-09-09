@@ -12,6 +12,7 @@ return {
       lspconfig.lua_ls.setup {}
       lspconfig.clangd.setup {}
       lspconfig.ruff.setup {}
+      lspconfig.jdtls.setup {}
     end
   },
   {

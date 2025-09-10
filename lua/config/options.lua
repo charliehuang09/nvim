@@ -13,14 +13,11 @@ opt.tabstop = 2 -- 2 spaces for tabs
 opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
+opt.scrolloff = 18 -- minimal number of screen lines to keep above and below the cursor
 
 opt.wrap = true
 
 opt.clipboard:append("unnamedplus") -- use system clipboard
-
-opt.updatetime = 40
-
-vim.opt.hidden = false
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",

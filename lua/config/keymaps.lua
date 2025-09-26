@@ -64,3 +64,5 @@ vim.keymap.set('n', '<C-Left>', '<C-w>h', { desc = "Window left" })
 vim.keymap.set('n', '<C-Right>', '<C-w>l', { desc = "Window right" })
 
 vim.keymap.set('n', '<leader>fmd', vim.lsp.buf.format)
+
+vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, { noremap = true, silent = true })

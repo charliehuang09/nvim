@@ -67,7 +67,7 @@ vim.keymap.set('n', '<leader>fmd', vim.lsp.buf.format)
 
 vim.keymap.set('n', 'ga', vim.lsp.buf.code_action, { noremap = true, silent = true })
 
-vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true, silent = true }) -- Move to the left window
-vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true, silent = true }) -- Move to the window below
-vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true, silent = true }) -- Move to the window above
-vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true }) -- Move to the right window
+vim.keymap.set("n", "<C-Left>", "<C-w>h", { noremap = true, silent = true }) -- Move to the left window
+vim.keymap.set("n", "<C-Down>", "<C-w>j", { noremap = true, silent = true }) -- Move to the window below
+vim.keymap.set("n", "<C-Up>", "<C-w>k", { noremap = true, silent = true }) -- Move to the window above
+vim.keymap.set("n", "<C-Right>", "<C-w>l", { noremap = true, silent = true }) -- Move to the right window

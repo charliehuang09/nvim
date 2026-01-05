@@ -10,7 +10,18 @@ return {
       local lspconfig = require("lspconfig")
 
       lspconfig.lua_ls.setup {}
-      lspconfig.clangd.setup {}
+      lspconfig.clangd.setup {
+          cmd = {
+    "clangd",
+    "--background-index",
+    "--clang-tidy",
+    "--completion-style=detailed",
+    "--header-insertion=never",
+  },
+  init_options = {
+    clangdFileStatus = true,
+  },
+      }
       lspconfig.ruff.setup {}
       lspconfig.jdtls.setup {}
     end

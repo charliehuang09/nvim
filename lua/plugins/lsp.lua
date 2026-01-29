@@ -8,22 +8,26 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
+      -- local lspconfig = vim.lsp.config()
 
-      lspconfig.lua_ls.setup {}
-      lspconfig.clangd.setup {
-          cmd = {
-    "clangd",
-    "--background-index",
-    "--clang-tidy",
-    "--completion-style=detailed",
-    "--header-insertion=never",
-  },
-  init_options = {
-    clangdFileStatus = true,
-  },
-      }
-      lspconfig.ruff.setup {}
-      lspconfig.jdtls.setup {}
+
+      vim.lsp.config("clangd", {
+        cmd = {
+          "clangd",
+          "--background-index",
+          "--clang-tidy",
+          "--completion-style=detailed",
+          "--header-insertion=never",
+        },
+        init_options = {
+          clangdFileStatus = true,
+        },
+      })
+
+
+      vim.lsp.config("lua_ls", {})
+      vim.lsp.config("ruff", {})
+      vim.lsp.config("jdtls", {})
     end
   },
   {

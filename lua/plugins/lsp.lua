@@ -7,9 +7,8 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local lspconfig = require("lspconfig")
+      -- local lspconfig = require("lspconfig")
       -- local lspconfig = vim.lsp.config()
-
 
       vim.lsp.config("clangd", {
         cmd = {
@@ -28,6 +27,12 @@ return {
       vim.lsp.config("lua_ls", {})
       vim.lsp.config("ruff", {})
       vim.lsp.config("jdtls", {})
+      vim.lsp.enable({
+      "clangd",
+      "lua_ls",
+      "ruff",
+      "jdtls",
+    })
     end
   },
   {

@@ -3,8 +3,8 @@ local keymap = vim.keymap
 vim.g.mapleader = " "
 
 keymap.set("n", ";", ":", {})
-keymap.set({ 'n', 'v' }, 'd', '"_d', { noremap = true })
-keymap.set('n', 'dd', '"_dd', { noremap = true })
+-- keymap.set({ 'n', 'v' }, 'd', '"_d', { noremap = true })
+-- keymap.set('n', 'dd', '"_dd', { noremap = true })
 
 keymap.set("n", "J", ":m .+1<CR>==", { noremap = true, silent = true })
 keymap.set("n", "K", ":m .-2<CR>==", { noremap = true, silent = true })

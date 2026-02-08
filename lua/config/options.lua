@@ -1,6 +1,7 @@
 local opt = vim.opt
+local o = vim.o
 
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "tokyonight"
 
 vim.diagnostic.config({
   virtual_text = true,
@@ -14,8 +15,12 @@ opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 opt.scrolloff = 18 -- minimal number of screen lines to keep above and below the cursor
-
 opt.wrap = true
+
+o.swapfile = false
+o.ignorecase = true
+o.hidden = true
+o.lazyredraw = true
 
 opt.clipboard:append("unnamedplus") -- use system clipboard
 
